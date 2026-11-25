@@ -170,6 +170,16 @@ img{max-width:100%;display:block}
 .pair div{border-radius:var(--r-in);padding:12px 14px;background:oklch(0.975 0.01 75 / 0.1);border:1px solid var(--line-dark);font-size:13px;line-height:1.35}
 .pair b{display:block;font:500 20px/1.1 var(--serif);margin-bottom:2px;color:var(--on-dark)}
 
+/* Card Head Spa (foto) */
+.c-head{min-height:clamp(360px,34vw,440px);display:flex;flex-direction:column;justify-content:flex-end;color:var(--on-dark);border-color:transparent;background:oklch(0.22 0.02 50)}
+.c-head-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:42% 40%}
+.c-head::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg in oklch, oklch(0.2 0.02 50 / 0) 30%, oklch(0.2 0.025 45 / 0.92) 100%)}
+.c-head .eyebrow{color:oklch(0.82 0.08 75)}
+.c-head p{color:var(--on-dark-2);max-width:38ch}
+.c-head p strong{color:var(--on-dark);font-weight:600}
+.c-head .more{color:var(--on-dark)}
+.c-head .more .box{background:oklch(0.975 0.01 75 / 0.16)}
+
 /* Card exames */
 .c-exa{background:var(--nude)}
 .c-exa p{color:var(--ink-2)}
@@ -298,6 +308,16 @@ img{max-width:100%;display:block}
       <a class="more" href="https://wa.me/5575988367934?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20da%20Cl%C3%ADnica%20Lemis%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20de%20est%C3%A9tica%20%28drenagem%20linf%C3%A1tica%20/%20harmoniza%C3%A7%C3%A3o%20facial%29." target="_blank" rel="noopener" data-track="whatsapp_estetica" data-label="Card Estética">Agendar avaliação <span class="box"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
     </article>
 
+    <article class="card c-head" aria-labelledby="t-head">
+      <img class="c-head-photo" src="assets/head-spa.webp" alt="Cliente relaxando durante o Head Spa, com massagem no couro cabeludo sob ducha de água morna" width="1200" height="820" loading="lazy" decoding="async">
+      <div class="c-head-body">
+        <p class="eyebrow">ritual de relaxamento</p>
+        <h2 id="t-head">Head Spa</h2>
+        <p>Limpeza e massagem do couro cabeludo com água morna. <strong>Uma pausa para desacelerar</strong> e cuidar dos fios.</p>
+        <a class="more" href="https://wa.me/5575988367934?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20da%20Cl%C3%ADnica%20Lemis%20e%20gostaria%20de%20agendar%20um%20Head%20Spa.%20Quais%20s%C3%A3o%20os%20hor%C3%A1rios%20dispon%C3%ADveis%3F" target="_blank" rel="noopener" data-track="whatsapp_headspa" data-label="Card Head Spa">Agendar Head Spa <span class="box"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span></a>
+      </div>
+    </article>
+
     <article class="card c-exa" aria-labelledby="t-exa">
       <span class="ring" aria-hidden="true"></span>
       <p class="eyebrow">sem sair de Tucano</p>
@@ -344,7 +364,7 @@ img{max-width:100%;display:block}
         <button class="tab" type="button" data-cat="estetica" aria-pressed="false">Estética &amp; Spa</button>
         <button class="tab" type="button" data-cat="exames" aria-pressed="false">Exames</button>
       </div>
-      <p class="sr-only" id="status" aria-live="polite">16 serviços</p>
+      <p class="sr-only" id="status" aria-live="polite">17 serviços</p>
       <div class="list-wrap">
         <ul class="list" id="lista">
           <li class="svc" data-cat="medicas">
@@ -446,6 +466,14 @@ img{max-width:100%;display:block}
           <li class="svc" data-cat="estetica">
             <a class="svc-link" href="https://wa.me/5575988367934?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20da%20Cl%C3%ADnica%20Lemis%20e%20gostaria%20de%20agendar%20Drenagem%20linf%C3%A1tica.%20Quais%20s%C3%A3o%20os%20dias%20e%20hor%C3%A1rios%20dispon%C3%ADveis%3F" target="_blank" rel="noopener" data-track="whatsapp_especialidade" data-label="Drenagem linfática">
               <span class="svc-txt"><span class="svc-name">Drenagem linfática</span><span class="svc-desc">Massagem que ajuda a reduzir inchaço e retenção de líquidos.</span></span>
+              <span class="svc-tag">Estética & Spa</span>
+              <span class="svc-go" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+              <span class="sr-only">Agendar pelo WhatsApp</span>
+            </a>
+          </li>
+          <li class="svc" data-cat="estetica">
+            <a class="svc-link" href="https://wa.me/5575988367934?text=Ol%C3%A1%21%20Vim%20pela%20p%C3%A1gina%20da%20Cl%C3%ADnica%20Lemis%20e%20gostaria%20de%20agendar%20Head%20Spa.%20Quais%20s%C3%A3o%20os%20dias%20e%20hor%C3%A1rios%20dispon%C3%ADveis%3F" target="_blank" rel="noopener" data-track="whatsapp_especialidade" data-label="Head Spa">
+              <span class="svc-txt"><span class="svc-name">Head Spa</span><span class="svc-desc">Ritual de limpeza e massagem do couro cabeludo com água morna.</span></span>
               <span class="svc-tag">Estética & Spa</span>
               <span class="svc-go" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
               <span class="sr-only">Agendar pelo WhatsApp</span>
