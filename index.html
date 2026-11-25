@@ -187,9 +187,16 @@ p strong{color:var(--accent);font-weight:700}
 .b-cafe .go i{background:oklch(100% 0 0 / .1);border-color:oklch(100% 0 0 / .2)}
 .b-cafe .pic img{mix-blend-mode:normal;object-position:30% 45%;mask-image:linear-gradient(90deg,transparent,#000 40%);max-height:none;width:100%}
 .today .pic{align-self:center;padding-right:20px}
+.banner .group{align-self:center;padding-right:14px}
+.banner .group span{position:relative;flex:none;width:48px;height:48px;border-radius:50%;overflow:hidden;border:3px solid var(--paper);margin-left:-14px;box-shadow:var(--shadow)}
+.banner .group span:first-child{margin-left:0}
+.banner .group .g1{width:60px;height:60px;z-index:1}
+.banner .icon{align-self:center;padding-right:22px}
+.banner .icon span{display:grid;place-items:center;width:96px;height:96px;border-radius:50%;background:oklch(100% 0 0 / .55);border:1px solid var(--line);color:var(--accent)}
+.banner .icon .ico{width:44px;height:44px;stroke-width:1.2}
 .stack{display:flex}
-.stack img,.stack span{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:50% 15%;border:3px solid var(--cafe);margin-left:-16px;background:var(--sand)}
-.stack img:first-child{margin-left:0}
+.stack img,.stack span{flex:none;width:46px;height:46px;border-radius:50%;overflow:hidden;border:3px solid var(--cafe);margin-left:-16px;background:var(--sand)}
+.stack img:first-child,.stack span:first-child{margin-left:0}
 .stack span{display:grid;place-items:center;font-size:13px;font-weight:700;color:var(--cafe);background:var(--champ)}
 .price-tag{align-self:center;justify-self:center;text-align:center;padding-right:18px}
 .price-tag small{display:block;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;opacity:.75}
@@ -212,8 +219,11 @@ p strong{color:var(--accent);font-weight:700}
 .day-title span{font-size:13px;color:var(--muted)}
 .slots{display:grid;gap:10px;margin-top:6px}
 .slot{display:grid;grid-template-columns:60px minmax(0,1fr) auto;align-items:center;gap:14px;padding:10px 12px 10px 10px;border-radius:18px;background:var(--bg);border:1px solid var(--line)}
-.ava{width:60px;height:60px;border-radius:14px;object-fit:cover;object-position:50% 12%;background:var(--sand)}
-span.ava{display:grid;place-items:center;font:600 20px var(--serif);background:var(--cafe);color:var(--champ)}
+.ava{width:60px;height:60px;border-radius:50%;overflow:hidden;flex:none}
+/* Avatar vazio (perfil sem foto) */
+.sil{width:100%;height:100%}
+.sil rect{fill:light-dark(oklch(88% .012 70),oklch(36% .015 58))}
+.sil circle,.sil path{fill:light-dark(oklch(97.5% .004 80),oklch(52% .015 58))}
 .slot h3{font:700 15.5px/1.3 var(--sans);letter-spacing:0}
 .slot p{margin:2px 0 0;font-size:13.5px;color:var(--muted)}
 .slot .btn{min-height:44px;padding:0 14px;font-size:13.5px;border-radius:12px}
@@ -281,7 +291,8 @@ span.ava{display:grid;place-items:center;font:600 20px var(--serif);background:v
 .pro img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 15%;z-index:-2;transition:scale .5s}
 .pro:hover img{scale:1.04}
 .pro::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(in oklch 180deg,transparent 45%,oklch(27% .022 58 / .9) 100%)}
-.pro .ini{position:absolute;inset:0;display:grid;place-items:center;font:500 64px var(--serif);color:var(--champ);background:var(--cafe);z-index:-2}
+.pro .ini{position:absolute;inset:0;z-index:-2;background:light-dark(oklch(88% .012 70),oklch(36% .015 58))}
+.pro .ini .sil{position:absolute;left:0;right:0;bottom:12%;width:100%;height:auto}
 .pro .pt{position:absolute;left:14px;right:14px;bottom:14px;display:grid;gap:2px}
 .pro h3{font:700 16px/1.25 var(--sans);letter-spacing:0}
 .pro p{margin:0;font-size:13px;opacity:.85}
@@ -376,7 +387,7 @@ dialog.legal-d .x{float:right}
         <p><strong>Especialistas</strong> do coração à pediatria, da psicologia à dermatologia.</p>
         <span class="go">Ver especialidades<i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16 16 8M9 8h7v7"/></svg></i></span>
       </div>
-      <div class="pic"><img src="img/orlando-jones.webp" width="240" height="320" loading="lazy" alt="Dr. Orlando Jones, pediatra da Lemis"></div>
+      <div class="pic group" aria-hidden="true"><span class="g0"><svg class="sil" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64"/><circle cx="32" cy="25" r="11.5"/><path d="M9 66c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg></span><span class="g1"><svg class="sil" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64"/><circle cx="32" cy="25" r="11.5"/><path d="M9 66c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg></span><span class="g2"><svg class="sil" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64"/><circle cx="32" cy="25" r="11.5"/><path d="M9 66c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg></span></div>
     </a>
     <a class="banner b-cafe rise" href="#head-spa" data-ev="banner_headspa">
       <div class="bt">
@@ -392,7 +403,7 @@ dialog.legal-d .x{float:right}
         <p>Ultrassom, eco, MAPA e mais, <strong>com laudo</strong> e sem sair de Tucano.</p>
         <span class="go">Ver exames<i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16 16 8M9 8h7v7"/></svg></i></span>
       </div>
-      <div class="pic"><img src="img/ana-margarida.webp" width="240" height="320" loading="lazy" alt="Dra. Ana Margarida, ultrassonografista da Lemis"></div>
+      <div class="pic icon" aria-hidden="true"><span><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="3"/><path d="M7 11c1.5-3 3-3 4.5 0s3 3 4.5 0"/><path d="M9 21h6"/></svg></span></div>
     </a>
     <a class="banner b-cafe rise" data-wa="Olá! Tenho interesse no pacote Saúde do Homem (USG abdome, tireoide e próstata)." data-ev="whatsapp_pacote" href="https://wa.me/5575988367934" target="_blank" rel="noopener">
       <div class="bt">
@@ -408,7 +419,7 @@ dialog.legal-d .x{float:right}
         <p>Conheça <strong>quem cuida de você</strong> e agende com o profissional.</p>
         <span class="go">Conhecer a equipe<i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16 16 8M9 8h7v7"/></svg></i></span>
       </div>
-      <div class="pic"><img src="img/emellin-oliveira.webp" width="240" height="320" loading="lazy" alt="Dra. Emellin Oliveira, psiquiatra da Lemis"></div>
+      <div class="pic group" aria-hidden="true"><span class="g0"><svg class="sil" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64"/><circle cx="32" cy="25" r="11.5"/><path d="M9 66c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg></span><span class="g1"><svg class="sil" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64"/><circle cx="32" cy="25" r="11.5"/><path d="M9 66c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg></span><span class="g2"><svg class="sil" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64"/><circle cx="32" cy="25" r="11.5"/><path d="M9 66c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg></span></div>
     </a>
   </div>
 
@@ -525,21 +536,21 @@ const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">"
 const ARROW = '<i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16 16 8M9 8h7v7"/></svg></i>';
 
 /* ===== PROFISSIONAIS =====
-   foto: arquivo em img/ (deixe "" para mostrar as iniciais) */
+   Sem fotos: todos aparecem com avatar vazio. */
 const PROS = {
-  "mariana-macedo":   {n:"Mariana Macêdo",       e:"Psicóloga",         foto:"img/mariana-macedo.webp"},
-  "juliana-posto":    {n:"Juliana S. Posto",     e:"Nutricionista",     foto:"img/juliana-posto.webp"},
-  "yara-matos":       {n:"Dra. Yara Matos",      e:"Psicóloga",         foto:"img/yara-matos.webp"},
-  "manuela-santos":   {n:"Manuela Santos",       e:"Enfermeira",        foto:"img/manuela-santos.webp"},
-  "emellin-oliveira": {n:"Dra. Emellin Oliveira",e:"Psiquiatria",       foto:"img/emellin-oliveira.webp"},
-  "cassio-watanabi":  {n:"Dr. Cássio Watanabi",  e:"Clínico da dor",    foto:"img/cassio-watanabi.webp"},
-  "joni-araujo":      {n:"Dr. Joni Araújo",      e:"Ultrassonografista",foto:"img/joni-araujo.webp"},
-  "islaine-moraes":   {n:"Islaine Moraes",       e:"Nutricionista",     foto:"img/islaine-moraes.webp"},
-  "ramom-seixas":     {n:"Ramom Seixas",         e:"Fisioterapeuta",    foto:"img/ramom-seixas.webp"},
-  "orlando-jones":    {n:"Dr. Orlando Jones",    e:"Pediatra",          foto:"img/orlando-jones.webp"},
-  "ana-margarida":    {n:"Dra. Ana Margarida",   e:"Ultrassonografista",foto:"img/ana-margarida.webp"},
-  "jonathas-brazil":  {n:"Dr. Jonathas Brazil",  e:"Angiologista",      foto:"img/jonathas-brazil.webp"},
-  "joedson-cruz":     {n:"Dr. Joedson Cruz",     e:"Urologia e cirurgia geral", reg:"CRM 39228 · RQE 27.439", foto:""}
+  "mariana-macedo":   {n:"Mariana Macêdo",       e:"Psicóloga"},
+  "juliana-posto":    {n:"Juliana S. Posto",     e:"Nutricionista"},
+  "yara-matos":       {n:"Dra. Yara Matos",      e:"Psicóloga"},
+  "manuela-santos":   {n:"Manuela Santos",       e:"Enfermeira"},
+  "emellin-oliveira": {n:"Dra. Emellin Oliveira",e:"Psiquiatria"},
+  "cassio-watanabi":  {n:"Dr. Cássio Watanabi",  e:"Clínico da dor"},
+  "joni-araujo":      {n:"Dr. Joni Araújo",      e:"Ultrassonografista"},
+  "islaine-moraes":   {n:"Islaine Moraes",       e:"Nutricionista"},
+  "ramom-seixas":     {n:"Ramom Seixas",         e:"Fisioterapeuta"},
+  "orlando-jones":    {n:"Dr. Orlando Jones",    e:"Pediatra"},
+  "ana-margarida":    {n:"Dra. Ana Margarida",   e:"Ultrassonografista"},
+  "jonathas-brazil":  {n:"Dr. Jonathas Brazil",  e:"Angiologista"},
+  "joedson-cruz":     {n:"Dr. Joedson Cruz",     e:"Urologia e cirurgia geral", reg:"CRM 39228 · RQE 27.439"}
 };
 
 /* ===== AGENDA =====
@@ -612,6 +623,7 @@ document.getElementById("nPros").textContent = Object.keys(PROS).length;
 const today = new Date(); today.setHours(12, 0, 0, 0);
 const iso = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
 const week = Array.from({length: 7}, (_, i) => { const d = new Date(today); d.setDate(today.getDate() + i); return d; });
+const SIL = '<svg class="sil" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64"/><circle cx="32" cy="25" r="11.5"/><path d="M9 66c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg>';
 const initials = p => p.n.replace(/^Dra?\.\s*/, "").split(" ").map(w => w[0]).slice(0, 2).join("");
 const prosOn = d => (AGENDA[iso(d)] || []).map(k => PROS[k]).filter(Boolean);
 const tabs = document.getElementById("tabs"), panel = document.getElementById("dayPanel");
@@ -623,7 +635,7 @@ function showDay(i, focus) {
   const d = week[i], label = d.toLocaleDateString("pt-BR", {weekday: "long", day: "2-digit", month: "long"}), list = prosOn(d);
   panel.innerHTML = list.length
     ? `<div class="day-title"><strong>${esc(label.charAt(0).toUpperCase() + label.slice(1))}</strong><span>${list.length} ${list.length > 1 ? "profissionais" : "profissional"}</span></div><div class="slots">` +
-      list.map(p => `<article class="slot">${p.foto ? `<img class="ava" src="${esc(p.foto)}" alt="Foto de ${esc(p.n)}" width="60" height="60" loading="lazy" decoding="async">` : `<span class="ava" aria-hidden="true">${esc(initials(p))}</span>`}
+      list.map(p => `<article class="slot"><span class="ava" aria-hidden="true">${SIL}</span>
         <div><h3>${esc(p.n)}</h3><p>${esc(p.e)}</p></div>
         <a class="btn btn-cafe" target="_blank" rel="noopener" data-ev="whatsapp_agenda" data-label="${esc(p.n)}" aria-label="Agendar com ${esc(p.n)}"
            href="${esc(waLink(`Olá! Quero agendar com ${p.n} (${p.e}) para ${label}.`))}">Agendar</a></article>`).join("") + `</div>`
@@ -641,14 +653,14 @@ showDay(0);
 const todayList = prosOn(today), stack = document.getElementById("todayStack");
 if (todayList.length) {
   document.getElementById("todayText").innerHTML = `<strong>${todayList.length} ${todayList.length > 1 ? "profissionais" : "profissional"}</strong> ${todayList.length > 1 ? "atendem" : "atende"} hoje. Agende direto pelo WhatsApp.`;
-  stack.innerHTML = todayList.slice(0, 3).map(p => p.foto ? `<img src="${esc(p.foto)}" alt="" width="52" height="52">` : `<span>${esc(initials(p))}</span>`).join("") + (todayList.length > 3 ? `<span>+${todayList.length - 3}</span>` : "");
+  stack.innerHTML = todayList.slice(0, 2).map(() => `<span>${SIL}</span>`).join("") + (todayList.length > 2 ? `<span>+${todayList.length - 2}</span>` : "");
 } else {
   const next = week.slice(1).find(d => prosOn(d).length);
   if (next) {
     const nl = prosOn(next);
     document.getElementById("todayTitle").textContent = "Próxima agenda";
     document.getElementById("todayText").innerHTML = `<strong>${esc(next.toLocaleDateString("pt-BR", {weekday: "long"}))}</strong>: ${nl.length} ${nl.length > 1 ? "profissionais" : "profissional"}. Agende pelo WhatsApp.`;
-    stack.innerHTML = nl.slice(0, 3).map(p => p.foto ? `<img src="${esc(p.foto)}" alt="" width="52" height="52">` : `<span>${esc(initials(p))}</span>`).join("");
+    stack.innerHTML = nl.slice(0, 2).map(() => `<span>${SIL}</span>`).join("");
   }
 }
 
@@ -693,7 +705,7 @@ const daysOf = k => [...new Set(Object.keys(AGENDA).filter(d => AGENDA[d].includ
 const team = document.getElementById("team");
 team.innerHTML = Object.entries(PROS).map(([k, p]) => { const dd = daysOf(k); return `<a class="pro" target="_blank" rel="noopener" data-ev="whatsapp_profissional" data-label="${esc(p.n)}"
    aria-label="${esc(p.n)}, ${esc(p.e)}. Agendar pelo WhatsApp" href="${esc(waLink(`Olá! Gostaria de agendar com ${p.n} (${p.e}).`))}">
-   ${p.foto ? `<img src="${esc(p.foto)}" alt="" width="240" height="320" loading="lazy" decoding="async">` : `<span class="ini" aria-hidden="true">${esc(initials(p))}</span>`}
+   <span class="ini" aria-hidden="true">${SIL}</span>
    <div class="pt"><h3>${esc(p.n)}</h3><p>${esc(p.e)}</p>${p.reg ? `<p>${esc(p.reg)}</p>` : ""}${dd.length ? `<span class="when">Nesta semana: ${esc(dd.join(", "))}</span>` : ""}</div></a>`; }).join("");
 document.querySelectorAll(".arrow").forEach(b => b.addEventListener("click", () => team.scrollBy({left: +b.dataset.dir * team.clientWidth * .75, behavior: "smooth"})));
 team.addEventListener("keydown", e => { if (e.key === "ArrowRight" || e.key === "ArrowLeft") { team.scrollBy({left: (e.key === "ArrowRight" ? 1 : -1) * 240, behavior: "smooth"}); e.preventDefault(); } });
