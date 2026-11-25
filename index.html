@@ -121,10 +121,10 @@ img{max-width:100%;display:block}
 /* Herói */
 .hero{position:sticky;top:20px;min-height:clamp(560px,calc(100dvh - 160px),780px);display:flex;flex-direction:column;justify-content:flex-end;color:var(--on-dark);border-color:transparent;
   background:linear-gradient(172deg in oklch, oklch(0.6 0.06 55) 0%, oklch(0.42 0.05 45) 52%, oklch(0.25 0.03 40) 100%)}
-.hero-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
-.hero-photo + .hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg in oklch, oklch(0.25 0.03 40 / 0) 35%, oklch(0.22 0.03 40 / 0.88) 100%)}
+.hero-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:70% 30%}
+.hero-photo + .hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg in oklch, oklch(0.22 0.03 40 / 0.5) 0%, oklch(0.25 0.03 40 / 0) 18%, oklch(0.25 0.03 40 / 0) 30%, oklch(0.25 0.03 40 / 0.55) 55%, oklch(0.2 0.03 40 / 0.94) 100%)}
 .hero-mark{position:absolute;z-index:-1;right:-8%;top:-4%;width:78%;height:auto;color:oklch(0.975 0.01 75 / 0.055)}
-.hero .kicker{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--on-dark-2);margin-bottom:auto}
+.hero .kicker{text-shadow:0 1px 8px oklch(0.2 0.03 40 / 0.5);display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--on-dark-2);margin-bottom:auto}
 .hero .kicker::before{content:"";width:22px;height:1px;background:currentColor}
 .hero h1{margin:0;font-family:var(--serif);font-weight:500;line-height:.92;letter-spacing:-.015em}
 .hero h1 .l1{display:block;font-style:italic;font-size:clamp(30px,3vw,40px);color:var(--on-dark-2)}
@@ -265,10 +265,9 @@ img{max-width:100%;display:block}
   <!-- Coluna 1: destaque -->
   <div class="col col-hero">
     <section class="card hero" aria-labelledby="h1">
-      <!-- Para usar uma foto da clínica, salve em assets/hero.jpg e descomente as 2 linhas abaixo:
-      <img class="hero-photo" src="assets/hero.jpg" alt="Recepção da Clínica Lemis em Tucano-BA" width="900" height="1200" fetchpriority="high">
-      <div class="hero-shade"></div> -->
-      <svg class="hero-mark" viewBox="10 45 66 112" aria-hidden="true"><g fill="currentColor"><path d="M 14.50,49.25 L 14.25,49.50 L 14.25,134.00 L 14.50,134.25 L 14.50,136.25 L 14.75,136.50 L 15.25,140.75 L 16.00,141.75 L 16.50,143.50 L 19.00,147.00 L 22.25,149.75 L 26.25,151.50 L 27.50,151.50 L 31.00,152.50 L 70.75,152.50 L 71.00,152.75 L 71.50,152.50 L 71.75,152.00 L 71.50,149.75 L 69.75,149.25 L 67.75,149.50 L 67.50,149.25 L 35.00,149.25 L 34.75,149.00 L 33.25,149.00 L 28.25,147.00 L 25.25,143.50 L 23.75,140.50 L 23.25,138.75 L 23.25,137.75 L 23.00,137.50 L 23.00,136.25 L 22.75,136.00 L 22.75,49.50 L 22.50,49.25 Z"/></g></svg>
+      <img class="hero-photo" src="assets/hero.webp" alt="Médica da Clínica Lemis sorrindo e acolhendo uma paciente durante a consulta" width="1200" height="801" fetchpriority="high" decoding="async">
+      <div class="hero-shade"></div>
+      <svg class="hero-mark" hidden viewBox="10 45 66 112" aria-hidden="true"><g fill="currentColor"><path d="M 14.50,49.25 L 14.25,49.50 L 14.25,134.00 L 14.50,134.25 L 14.50,136.25 L 14.75,136.50 L 15.25,140.75 L 16.00,141.75 L 16.50,143.50 L 19.00,147.00 L 22.25,149.75 L 26.25,151.50 L 27.50,151.50 L 31.00,152.50 L 70.75,152.50 L 71.00,152.75 L 71.50,152.50 L 71.75,152.00 L 71.50,149.75 L 69.75,149.25 L 67.75,149.50 L 67.50,149.25 L 35.00,149.25 L 34.75,149.00 L 33.25,149.00 L 28.25,147.00 L 25.25,143.50 L 23.75,140.50 L 23.25,138.75 L 23.25,137.75 L 23.00,137.50 L 23.00,136.25 L 22.75,136.00 L 22.75,49.50 L 22.50,49.25 Z"/></g></svg>
       <span class="kicker">Tucano · Bahia</span>
       <h1 id="h1"><span class="l1">Cuide de você</span><span class="l2">por inteiro</span></h1>
       <p class="lead">Consultas com especialistas, exames, terapias e estética <strong>em um só lugar</strong>, no Centro de Tucano.</p>
