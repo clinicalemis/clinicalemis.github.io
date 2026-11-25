@@ -1,0 +1,199 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light"><meta name="theme-color" content="#f4ede4">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+<title>Termos de uso e privacidade | Clínica Lemis</title>
+<meta name="description" content="Termos de uso e política de privacidade da página da Clínica Lemis, clínica médica e spa em Tucano-BA.">
+<link rel="canonical" href="https://clinicalemis.github.io/privacidade.html"><meta name="robots" content="index, follow">
+<style>
+:root{
+  --bg: oklch(0.962 0.012 72);
+  --surface: oklch(0.985 0.007 75);
+  --nude: oklch(0.915 0.024 62);
+  --nude-2: oklch(0.875 0.032 58);
+  --ink: oklch(0.245 0.03 40);          /* marrom da logo */
+  --ink-2: oklch(0.38 0.03 45);
+  --muted: oklch(0.52 0.025 52);
+  --caramel: oklch(0.6 0.07 55);
+  --caramel-deep: oklch(0.44 0.055 45);
+  --on-dark: oklch(0.975 0.01 75);
+  --on-dark-2: oklch(0.975 0.01 75 / 0.78);
+  --line: oklch(0.245 0.03 40 / 0.12);
+  --line-dark: oklch(0.975 0.01 75 / 0.22);
+
+  --r-out: 28px;
+  --pad: clamp(20px, 2.2vw, 30px);
+  --r-in: max(8px, calc(var(--r-out) - var(--pad)));
+  --gap: clamp(14px, 1.6vw, 20px);
+
+  --serif: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
+  --sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ease: cubic-bezier(.2,.7,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.55 var(--sans);-webkit-font-smoothing:antialiased;min-height:100dvh}
+a{color:inherit}
+img{max-width:100%;display:block}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+:focus-visible{outline:2px solid var(--caramel);outline-offset:3px;border-radius:6px}
+.ic{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.skip{position:absolute;left:12px;top:-60px;background:var(--ink);color:var(--on-dark);padding:10px 14px;border-radius:10px;z-index:10;text-decoration:none}
+.skip:focus{top:12px}
+
+/* Cabeçalho */
+.top{display:flex;flex-direction:column;align-items:center;gap:6px;padding:28px 20px 22px}
+.top .logo{width:clamp(120px,14vw,150px);height:auto;color:var(--ink)}
+.top .tag{font-size:10.5px;letter-spacing:.42em;text-transform:uppercase;color:var(--caramel-deep);padding-left:.42em}
+
+/* Grade */
+.layout{max-width:1260px;margin:0 auto;padding:0 clamp(14px,2.4vw,28px) 28px;display:grid;gap:var(--gap);grid-template-columns:minmax(0,1fr) minmax(0,1.06fr) minmax(0,1fr);align-items:start}
+.col{display:grid;gap:var(--gap);min-width:0}
+
+.card{position:relative;border-radius:var(--r-out);padding:var(--pad);overflow:hidden;isolation:isolate;border:1px solid var(--line)}
+.card h2{font:500 clamp(30px,2.6vw,38px)/1.02 var(--serif);margin:0 0 10px;letter-spacing:-.01em}
+.card h2 em{font-style:italic;color:var(--caramel)}
+.card p{margin:0}
+.eyebrow{font:italic 500 19px/1.1 var(--serif);color:var(--caramel-deep);margin-bottom:4px}
+
+/* Herói */
+.hero{position:sticky;top:20px;min-height:clamp(560px,calc(100dvh - 160px),780px);display:flex;flex-direction:column;justify-content:flex-end;color:var(--on-dark);border-color:transparent;
+  background:linear-gradient(172deg in oklch, oklch(0.6 0.06 55) 0%, oklch(0.42 0.05 45) 52%, oklch(0.25 0.03 40) 100%)}
+.hero-photo{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover}
+.hero-photo + .hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg in oklch, oklch(0.25 0.03 40 / 0) 35%, oklch(0.22 0.03 40 / 0.88) 100%)}
+.hero-mark{position:absolute;z-index:-1;right:-8%;top:-4%;width:78%;height:auto;color:oklch(0.975 0.01 75 / 0.09)}
+.hero .kicker{display:inline-flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--on-dark-2);margin-bottom:auto}
+.hero .kicker::before{content:"";width:22px;height:1px;background:currentColor}
+.hero h1{margin:0;font-family:var(--serif);font-weight:500;line-height:.92;letter-spacing:-.015em}
+.hero h1 .l1{display:block;font-style:italic;font-size:clamp(30px,3vw,40px);color:var(--on-dark-2)}
+.hero h1 .l2{display:block;font-size:clamp(62px,6.6vw,92px)}
+.hero .lead{margin:16px 0 22px;max-width:34ch;color:var(--on-dark-2);font-size:15.5px}
+.hero .lead strong{color:var(--on-dark);font-weight:600}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 20px;border-radius:999px;font:600 14.5px/1 var(--sans);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:background-color .25s var(--ease),color .25s var(--ease),border-color .25s var(--ease)}
+.btn-light{background:var(--on-dark);color:var(--ink)}
+.btn-light:hover{background:var(--nude)}
+.btn-dark{background:var(--ink);color:var(--on-dark)}
+.btn-dark:hover{background:var(--caramel-deep)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:transparent}
+.btn-ghost:hover{border-color:oklch(0.245 0.03 40 / 0.35)}
+.round{width:48px;height:48px;border-radius:50%;display:inline-grid;place-items:center;border:1px solid var(--line-dark);color:var(--on-dark);text-decoration:none;transition:background-color .25s var(--ease)}
+.round:hover{background:oklch(0.975 0.01 75 / 0.12)}
+.round .ic{width:20px;height:20px}
+
+/* Link de texto com seta */
+.more{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-weight:600;font-size:14px;text-decoration:none;color:var(--caramel-deep);background:none;border:0;padding:0;cursor:pointer;font-family:inherit}
+.more .box{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:oklch(0.6 0.07 55 / 0.14);transition:transform .25s var(--ease)}
+.more .ic{width:15px;height:15px}
+.more:hover .box{transform:translate(2px,-2px)}
+
+/* Card consultas */
+.c-med{background:var(--surface)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;padding:0;list-style:none}
+.chips li{font-size:12.5px;font-weight:500;padding:6px 11px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--ink-2)}
+.count{display:inline-flex;align-items:baseline;gap:6px;margin-top:4px;color:var(--muted);font-size:13px}
+.count b{font:500 30px/1 var(--serif);color:var(--ink)}
+
+/* Card estética */
+.c-spa{color:var(--on-dark);border-color:transparent;background:linear-gradient(160deg in oklch, oklch(0.6 0.07 55), oklch(0.4 0.05 45))}
+.c-spa .eyebrow{color:var(--on-dark-2)}
+.c-spa p{color:var(--on-dark-2)}
+.c-spa p strong{color:var(--on-dark);font-weight:600}
+.c-spa .more{color:var(--on-dark)}
+.c-spa .more .box{background:oklch(0.975 0.01 75 / 0.16)}
+.c-spa .ring{position:absolute;z-index:-1;right:-70px;bottom:-90px;width:240px;height:240px;border-radius:50%;border:1px solid var(--line-dark)}
+.c-spa .ring.r2{right:-20px;bottom:-140px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.pair div{border-radius:var(--r-in);padding:12px 14px;background:oklch(0.975 0.01 75 / 0.1);border:1px solid var(--line-dark);font-size:13px;line-height:1.35}
+.pair b{display:block;font:500 20px/1.1 var(--serif);margin-bottom:2px;color:var(--on-dark)}
+
+/* Card exames */
+.c-exa{background:var(--nude)}
+.c-exa p{color:var(--ink-2)}
+.c-exa .ring{position:absolute;z-index:-1;right:-60px;top:-60px;width:200px;height:200px;border-radius:50%;background:oklch(0.975 0.01 75 / 0.45)}
+
+/* Card localização */
+.c-loc{background:var(--surface);padding:0;display:grid}
+.c-loc .in{padding:var(--pad) var(--pad) 18px}
+.c-loc address{font-style:normal;color:var(--ink-2)}
+.c-loc address strong{color:var(--ink);font-weight:600}
+.map{position:relative;margin:0 10px 10px;border-radius:calc(var(--r-out) - 10px);overflow:hidden;aspect-ratio:16/9;background:var(--nude)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:saturate(.75) sepia(.12)}
+.loc-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.loc-actions .btn{min-height:42px;padding:0 16px;font-size:13.5px}
+
+/* Painel especialidades */
+.panel{position:sticky;top:20px;background:var(--surface);display:flex;flex-direction:column;max-height:calc(100dvh - 40px)}
+.panel header{text-align:center;padding-bottom:14px}
+.panel header p{color:var(--muted);font-size:13.5px}
+.search{position:relative;margin-bottom:12px}
+.search .ic{position:absolute;left:14px;top:50%;translate:0 -50%;color:var(--muted)}
+.search input{width:100%;min-height:46px;border-radius:var(--r-in);border:1px solid var(--line);background:var(--bg);padding:0 14px 0 42px;font:500 14.5px var(--sans);color:var(--ink)}
+.search input::placeholder{color:var(--muted)}
+.search input:focus{outline:none;border-color:var(--caramel);box-shadow:0 0 0 3px oklch(0.6 0.07 55 / 0.18)}
+.tabs{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;padding-bottom:12px;-webkit-mask-image:linear-gradient(90deg,#000 88%,transparent);mask-image:linear-gradient(90deg,#000 88%,transparent)}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:none;min-height:36px;padding:0 14px;border-radius:999px;border:1px solid var(--line);background:transparent;font:600 12.5px var(--sans);color:var(--ink-2);cursor:pointer;transition:background-color .2s var(--ease),color .2s var(--ease)}
+.tab[aria-pressed="true"]{background:var(--ink);color:var(--on-dark);border-color:var(--ink)}
+.list-wrap{position:relative;min-height:0;flex:1;display:flex}
+.list{list-style:none;margin:0;padding:4px 2px 18px;overflow:auto;flex:1;overscroll-behavior:contain;
+  -webkit-mask-image:linear-gradient(180deg,transparent 0,#000 12px,#000 calc(100% - 28px),transparent);mask-image:linear-gradient(180deg,transparent 0,#000 12px,#000 calc(100% - 28px),transparent)}
+.svc + .svc{border-top:1px solid var(--line)}
+.svc[hidden]{display:none}
+.svc-link{display:grid;grid-template-columns:1fr auto;grid-template-areas:"txt go" "tag go";column-gap:12px;row-gap:6px;align-items:center;padding:13px 6px;text-decoration:none;border-radius:12px;transition:background-color .2s var(--ease)}
+.svc-link:hover{background:var(--bg)}
+.svc-txt{grid-area:txt;display:flex;flex-direction:column}
+.svc-name{font:600 15px/1.25 var(--sans)}
+.svc-desc{color:var(--muted);font-size:13px;line-height:1.4}
+.svc-tag{grid-area:tag;justify-self:start;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--caramel-deep)}
+.svc-go{grid-area:go;width:36px;height:36px;border-radius:11px;display:grid;place-items:center;background:oklch(0.6 0.07 55 / 0.12);color:var(--caramel-deep);transition:background-color .2s var(--ease),color .2s var(--ease)}
+.svc-go .ic{width:15px;height:15px}
+.svc-link:hover .svc-go{background:var(--ink);color:var(--on-dark)}
+.empty{padding:24px 8px;text-align:center;color:var(--muted);font-size:14px}
+.panel .foot{border-top:1px solid var(--line);padding-top:16px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;color:var(--muted)}
+.panel .foot a{font-weight:600;color:var(--ink);white-space:nowrap}
+
+/* Rodapé */
+.site-foot{max-width:1260px;margin:0 auto;padding:10px 24px 40px;text-align:center;font-size:12.5px;color:var(--muted);display:grid;gap:6px}
+.site-foot nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px}
+.site-foot a{text-decoration:none}
+.site-foot a:hover{text-decoration:underline}
+
+/* Responsivo */
+@media (max-width:1099px){
+  .layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .col-hero{grid-column:1 / -1}
+  .hero{position:relative;top:auto;min-height:clamp(440px,62dvh,560px)}
+  .panel{position:relative;top:auto;max-height:none}
+  .list{overflow:visible;-webkit-mask-image:none;mask-image:none}
+}
+@media (max-width:719px){
+  body{font-size:14.5px}
+  .top{padding:22px 16px 16px}
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .hero{min-height:clamp(480px,78dvh,640px)}
+  .hero-mark{width:96%;right:-22%}
+  .pair{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.doc{max-width:720px;margin:0 auto 40px;padding:0 20px}.doc .card{background:var(--surface)}
+.doc h1{font:500 clamp(34px,5vw,46px)/1.05 var(--serif);margin:0 0 6px}.doc h2{font-size:26px!important;margin:26px 0 6px!important}
+.doc p,.doc li{color:var(--ink-2)}.doc a{color:var(--caramel-deep);font-weight:600}.back{display:inline-block;margin-top:24px}
+.nf{text-align:center}.nf .big{font:500 96px/1 var(--serif);color:var(--caramel)}</style></head><body>
+<header class="top"><a href="./" aria-label="Voltar para a página inicial" style="color:inherit"><svg class="logo" viewBox="0 40 474 120" role="img" aria-labelledby="logo-t"><title id="logo-t">Clínica Lemis</title><g fill="currentColor"><path d="M 204.50,49.25 L 204.25,49.50 L 204.25,152.25 L 204.50,152.50 L 208.25,152.50 L 208.50,152.25 L 208.50,72.75 L 209.25,71.75 L 210.00,72.25 L 210.00,72.75 L 211.25,75.25 L 212.25,76.25 L 212.25,76.75 L 213.25,78.00 L 213.25,78.50 L 214.00,79.25 L 214.50,80.50 L 217.25,84.50 L 220.25,90.00 L 222.75,93.50 L 224.25,96.50 L 227.25,101.00 L 228.25,103.25 L 229.25,104.25 L 230.25,106.25 L 232.00,108.75 L 232.00,109.25 L 234.00,112.00 L 236.25,116.25 L 237.75,118.25 L 238.50,120.00 L 239.25,120.75 L 240.00,122.50 L 241.00,123.50 L 242.25,126.00 L 243.75,128.00 L 245.25,131.00 L 246.00,131.75 L 246.50,133.00 L 247.00,133.50 L 247.00,134.00 L 247.75,134.75 L 248.75,136.50 L 249.50,137.25 L 250.25,137.25 L 252.50,134.25 L 253.75,132.00 L 253.75,131.50 L 254.50,130.75 L 255.75,128.25 L 256.50,127.50 L 258.00,125.00 L 258.75,123.25 L 259.50,122.50 L 260.00,121.25 L 260.75,120.50 L 261.25,119.25 L 262.50,117.50 L 263.00,116.00 L 265.25,113.00 L 265.50,112.00 L 267.25,109.50 L 267.75,108.00 L 268.50,107.50 L 270.50,103.75 L 273.50,99.25 L 275.00,96.25 L 276.50,94.25 L 277.75,91.75 L 278.50,91.00 L 279.75,88.50 L 280.50,87.75 L 281.75,85.00 L 283.50,82.50 L 283.75,81.75 L 284.50,81.00 L 284.75,80.00 L 285.75,78.75 L 286.00,78.00 L 286.75,77.25 L 286.75,76.50 L 289.00,73.50 L 289.75,71.50 L 290.25,71.00 L 290.75,71.00 L 291.25,71.75 L 291.25,152.00 L 291.50,152.50 L 299.50,152.50 L 300.00,151.50 L 300.00,50.25 L 299.75,49.50 L 299.00,49.25 L 298.50,49.75 L 297.75,51.50 L 295.50,54.50 L 293.75,58.25 L 291.25,61.75 L 289.00,66.25 L 287.25,68.50 L 285.00,73.00 L 284.00,74.00 L 281.25,79.25 L 277.25,85.50 L 277.00,86.50 L 275.50,88.25 L 275.00,89.75 L 273.25,92.25 L 272.75,93.50 L 272.00,94.25 L 269.00,99.75 L 268.25,100.50 L 267.75,101.75 L 266.25,104.00 L 266.00,105.00 L 264.00,107.50 L 264.00,108.00 L 263.50,108.50 L 262.75,110.25 L 261.50,112.00 L 261.00,113.25 L 260.00,114.25 L 259.50,115.50 L 258.00,117.75 L 257.75,118.75 L 256.25,120.75 L 254.75,123.75 L 254.00,124.50 L 253.50,125.75 L 252.50,126.75 L 252.00,126.75 L 250.50,123.75 L 248.75,121.25 L 248.75,120.75 L 246.75,118.00 L 246.00,116.25 L 245.00,115.00 L 243.50,112.25 L 242.75,111.50 L 240.75,107.50 L 239.50,106.00 L 239.50,105.50 L 237.75,103.00 L 237.75,102.50 L 232.75,94.75 L 232.50,93.75 L 231.75,93.00 L 231.50,92.25 L 229.00,88.50 L 228.50,87.25 L 227.75,86.50 L 224.50,80.50 L 223.50,79.50 L 222.75,78.25 L 222.50,77.25 L 221.00,75.25 L 219.50,72.25 L 218.75,71.50 L 217.25,68.50 L 215.75,66.50 L 215.50,65.50 L 214.50,64.50 L 212.75,61.00 L 211.75,60.00 L 211.25,58.75 L 210.00,57.00 L 209.75,56.00 L 208.00,53.75 L 207.50,52.50 L 205.75,49.75 L 205.25,49.25 Z"/><path d="M 105.50,49.25 L 105.25,49.50 L 105.25,136.50 L 106.00,138.50 L 106.25,140.75 L 107.00,142.25 L 107.00,142.75 L 108.00,144.25 L 108.00,144.75 L 109.25,146.00 L 110.00,147.25 L 112.75,149.50 L 115.75,151.00 L 118.00,151.75 L 119.50,151.75 L 120.25,152.25 L 121.50,152.25 L 121.75,152.50 L 164.50,152.50 L 164.75,152.25 L 164.75,150.75 L 165.00,150.50 L 164.50,149.50 L 128.25,149.50 L 128.00,149.25 L 124.00,149.00 L 123.25,148.50 L 121.25,148.00 L 119.75,147.25 L 116.75,144.50 L 115.00,141.75 L 114.75,140.25 L 114.25,139.50 L 114.00,136.75 L 113.75,136.50 L 113.75,100.00 L 114.75,99.25 L 153.75,99.25 L 154.00,98.75 L 154.00,96.50 L 153.50,96.00 L 114.25,96.00 L 113.75,95.50 L 113.75,54.25 L 113.50,54.00 L 113.75,53.00 L 115.00,52.25 L 140.50,52.75 L 140.75,53.00 L 142.75,53.00 L 143.00,53.25 L 149.25,53.50 L 149.50,53.75 L 152.25,53.75 L 152.50,54.00 L 156.25,54.25 L 156.50,54.50 L 159.25,54.50 L 159.50,54.75 L 160.75,54.75 L 162.50,55.25 L 163.25,54.00 L 163.25,53.00 L 163.00,52.75 L 163.25,52.50 L 163.00,49.50 L 162.75,49.25 Z"/><path d="M 14.50,49.25 L 14.25,49.50 L 14.25,134.00 L 14.50,134.25 L 14.50,136.25 L 14.75,136.50 L 15.25,140.75 L 16.00,141.75 L 16.50,143.50 L 19.00,147.00 L 22.25,149.75 L 26.25,151.50 L 27.50,151.50 L 31.00,152.50 L 70.75,152.50 L 71.00,152.75 L 71.50,152.50 L 71.75,152.00 L 71.50,149.75 L 69.75,149.25 L 67.75,149.50 L 67.50,149.25 L 35.00,149.25 L 34.75,149.00 L 33.25,149.00 L 28.25,147.00 L 25.25,143.50 L 23.75,140.50 L 23.25,138.75 L 23.25,137.75 L 23.00,137.50 L 23.00,136.25 L 22.75,136.00 L 22.75,49.50 L 22.50,49.25 Z"/><path d="M 344.75,49.00 L 344.00,49.50 L 344.00,152.25 L 344.75,152.75 L 345.00,152.50 L 352.50,152.50 L 352.75,152.25 L 352.75,49.50 L 352.50,49.25 L 345.25,49.25 Z"/><path d="M 423.50,47.50 L 423.25,47.75 L 417.25,48.25 L 409.00,51.00 L 405.75,52.75 L 400.25,57.25 L 399.75,58.25 L 398.25,60.00 L 396.00,64.25 L 396.00,65.00 L 395.25,66.75 L 395.25,68.00 L 395.00,68.25 L 395.00,70.50 L 394.75,70.75 L 395.00,76.75 L 395.25,77.00 L 396.25,81.75 L 396.75,82.25 L 397.25,84.00 L 398.50,86.25 L 402.75,91.50 L 407.75,95.75 L 412.25,98.75 L 412.75,98.75 L 419.75,102.50 L 421.00,102.75 L 422.00,103.50 L 423.75,103.75 L 424.25,104.25 L 425.75,104.75 L 427.25,105.75 L 427.75,105.75 L 428.50,106.25 L 429.25,106.25 L 432.25,107.75 L 432.75,107.75 L 433.25,108.25 L 434.75,108.75 L 436.00,109.75 L 439.00,111.00 L 442.25,113.25 L 446.50,116.75 L 447.25,118.00 L 449.50,120.00 L 452.00,125.25 L 452.25,127.75 L 452.75,128.50 L 452.75,130.25 L 453.00,130.50 L 453.00,133.50 L 452.00,136.50 L 452.00,137.75 L 450.00,142.00 L 448.75,143.50 L 446.00,146.00 L 444.50,147.00 L 441.75,148.00 L 440.00,149.00 L 438.50,149.00 L 437.50,149.50 L 435.50,149.75 L 435.25,150.00 L 427.00,150.00 L 426.75,149.75 L 424.50,149.50 L 423.25,149.00 L 420.50,148.75 L 419.50,148.00 L 418.00,148.00 L 416.75,147.25 L 415.75,147.25 L 414.25,146.50 L 413.75,146.50 L 413.25,146.00 L 412.75,146.00 L 409.75,144.50 L 409.25,144.00 L 407.75,143.25 L 407.25,143.25 L 405.00,141.50 L 404.25,141.25 L 403.00,140.00 L 402.25,139.75 L 401.00,138.50 L 400.00,138.00 L 396.50,134.25 L 395.75,134.25 L 394.00,136.25 L 391.25,138.75 L 391.00,139.50 L 395.00,143.50 L 397.25,144.75 L 399.75,146.75 L 402.00,147.75 L 403.50,148.75 L 404.00,148.75 L 405.50,149.75 L 406.75,150.00 L 408.00,150.75 L 408.75,150.75 L 410.25,151.50 L 411.50,151.50 L 413.75,152.50 L 417.25,153.00 L 418.25,153.50 L 422.25,153.75 L 422.50,154.00 L 424.00,154.00 L 424.25,154.25 L 427.50,154.25 L 427.75,154.00 L 431.75,154.00 L 432.00,153.75 L 435.75,153.50 L 436.75,153.00 L 439.50,152.50 L 440.25,152.00 L 443.00,151.25 L 444.25,150.50 L 445.25,150.25 L 445.75,149.75 L 447.50,149.00 L 450.25,147.00 L 454.25,142.75 L 457.00,137.75 L 457.00,137.00 L 457.75,135.25 L 457.75,133.75 L 458.00,133.50 L 458.00,132.00 L 458.25,131.75 L 458.25,124.25 L 457.75,122.75 L 457.50,119.25 L 456.75,118.00 L 456.50,116.50 L 455.50,114.50 L 454.75,113.75 L 453.00,110.75 L 451.00,108.50 L 447.25,105.00 L 444.50,103.00 L 442.50,102.00 L 441.50,101.00 L 438.25,99.25 L 437.75,99.25 L 436.75,98.50 L 434.75,97.75 L 434.25,97.25 L 433.00,97.00 L 431.50,96.00 L 430.00,95.75 L 427.00,94.25 L 425.75,94.00 L 420.75,91.50 L 419.00,91.00 L 415.75,89.00 L 415.25,89.00 L 414.00,88.00 L 413.50,88.00 L 411.75,87.00 L 408.25,84.00 L 407.00,83.25 L 404.00,80.00 L 402.50,77.75 L 402.50,77.25 L 401.50,75.50 L 401.50,74.50 L 401.00,73.50 L 400.75,69.50 L 400.50,69.25 L 400.75,65.25 L 401.75,62.00 L 403.25,59.50 L 406.50,56.25 L 408.25,55.00 L 408.75,55.00 L 411.00,53.75 L 412.50,53.50 L 413.75,52.75 L 417.50,52.25 L 417.75,52.00 L 419.00,52.00 L 419.25,51.75 L 425.50,51.75 L 425.75,52.00 L 427.00,52.00 L 428.50,52.50 L 431.50,52.75 L 433.00,53.50 L 435.25,53.75 L 436.00,54.25 L 440.25,55.50 L 444.75,58.00 L 446.75,59.50 L 447.50,59.75 L 448.50,60.75 L 449.25,60.75 L 453.00,56.00 L 453.00,55.25 L 449.75,53.00 L 449.25,53.00 L 447.75,52.00 L 446.50,51.75 L 445.00,51.00 L 444.25,51.00 L 442.25,50.00 L 441.25,50.00 L 439.50,49.25 L 436.50,48.75 L 435.75,48.25 L 433.25,48.25 L 433.00,48.00 L 431.50,48.00 L 431.25,47.75 L 424.25,47.75 Z"/></g></svg></a><span class="tag">Clínica Médica &amp; Spa</span></header>
+<main class="doc"><article class="card">
+<h1>Termos de uso e privacidade</h1><p>Atualizado em 25 de novembro de 2026.</p>
+<h2>Sobre esta página</h2>
+<p>Esta página reúne informações e links de contato da Clínica Lemis (Rua Manoel Ramiro, 3, Centro, Tucano-BA). O conteúdo tem caráter informativo e não substitui uma consulta com um profissional de saúde.</p>
+<h2>Dados que coletamos</h2>
+<p>Esta página não tem formulários, não pede cadastro e não guarda dados pessoais. A busca de especialidades funciona apenas no seu aparelho.</p>
+<h2>WhatsApp, Instagram e mapas</h2>
+<p>Ao tocar em um botão de WhatsApp, Instagram, Google Maps ou Waze, você é direcionado a serviços de terceiros, que têm suas próprias políticas de privacidade. As mensagens enviadas pelo WhatsApp são usadas somente para responder ao seu contato e organizar o seu atendimento, de acordo com a Lei Geral de Proteção de Dados (Lei 13.709/2018).</p>
+<p>O mapa incorporado é fornecido pelo Google e pode usar cookies próprios.</p>
+<h2>Estatísticas de acesso</h2>
+<p>Se ativarmos uma ferramenta de estatísticas (como o Google Analytics), ela registrará de forma agregada quais botões são mais usados, para melhorar a página.</p>
+<h2>Seus direitos</h2>
+<p>Você pode pedir informações, correção ou exclusão dos seus dados pelo WhatsApp <a href="https://wa.me/5575988367934">(75) 9 8836-7934</a>.</p>
+<a class="btn btn-dark back" href="./">Voltar para a página inicial</a>
+</article></main></body></html>
