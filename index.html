@@ -120,7 +120,7 @@ p strong{color:var(--accent);font-weight:700}
 .btn-soft{background:var(--paper);color:var(--ink);border-color:var(--line)}
 .btn-soft:hover{background:var(--sand)}
 .go{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:700;text-decoration:none}
-.go i{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:oklch(100% 0 0 / .5);border:1px solid var(--line)}
+.go i{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:color-mix(in oklch,var(--paper) 55%,transparent);border:1px solid var(--line)}
 .go i svg{width:15px;height:15px}
 
 /* Barra */
@@ -168,6 +168,54 @@ p strong{color:var(--accent);font-weight:700}
 .stat span{font-size:13px;font-weight:700}
 .stat small{font-size:12px;color:var(--muted)}
 @media (min-width:760px){.stats{grid-template-columns:repeat(4,minmax(0,1fr))}.stat{border:0!important;border-right:1px solid var(--line)!important}.stat:last-child{border-right:0!important}}
+
+/* Topo em 3 cartões */
+.top3{display:grid;gap:14px;padding-top:6px}
+.c-wa,.c-go,.c-today{border-radius:var(--r);box-shadow:var(--shadow);padding:clamp(20px,3.4vw,32px)}
+.c-wa{position:relative;display:grid;gap:14px;overflow:hidden;isolation:isolate;color:var(--cream);background:linear-gradient(in oklch 140deg,var(--cafe) 30%,var(--cafe-2))}
+.c-wa::after{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;border:1px solid oklch(77.5% .082 76 / .25);z-index:-1}
+.c-wa::before{content:"";position:absolute;right:-20px;top:-20px;width:140px;height:140px;border-radius:50%;border:1px solid oklch(77.5% .082 76 / .18);z-index:-1}
+.c-wa .pill{justify-self:start;background:oklch(100% 0 0 / .1);color:var(--cream);border-color:oklch(100% 0 0 / .2);box-shadow:none}
+.c-wa .pill .ico{color:var(--champ)}
+.c-wa h1{font-size:clamp(34px,6vw,52px);line-height:1.05}
+.c-wa h1 strong{color:var(--champ)}
+.c-wa p{margin:0;color:oklch(96.8% .009 85 / .82);max-width:44ch}
+.wa-big{justify-content:flex-start;gap:14px;min-height:64px;padding:0 20px;border-radius:18px;font-size:16.5px;margin-top:4px}
+.wa-big .ico{width:26px;height:26px}
+.wa-big span{display:grid;text-align:left;line-height:1.2}
+.wa-big small{font-size:13px;font-weight:600;opacity:.75}
+.call{justify-self:start;display:inline-flex;align-items:center;gap:6px;min-height:44px;font-size:14px;text-decoration:none;color:oklch(96.8% .009 85 / .75)}
+.call u{text-underline-offset:4px;color:var(--cream)}
+.c-go{background:linear-gradient(in oklch 135deg,var(--paper) 20%,var(--nude));display:grid;gap:16px}
+.c-go h2{font-size:clamp(26px,4vw,34px)}
+.go-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.tile{position:relative;display:grid;align-content:start;gap:4px;min-height:150px;padding:16px;border-radius:20px;background:var(--paper);border:1px solid var(--line);text-decoration:none;transition:border-color .2s,transform .2s}
+.tile:hover{border-color:var(--champ);transform:translateY(-2px)}
+.t-ic{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--sand);color:var(--accent);margin-bottom:10px}
+.tile b{font:600 21px/1.15 var(--serif)}
+.tile>span:not(.t-ic){font-size:13px;color:var(--muted);line-height:1.35}
+.tile i{position:absolute;right:12px;top:12px;display:grid;place-items:center;width:30px;height:30px;border-radius:9px;border:1px solid var(--line);color:var(--accent)}
+.tile i svg{width:15px;height:15px}
+.c-today{background:var(--paper);border:1px solid var(--line)}
+.ct-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:12px}
+.ct-head small{display:block;font-size:12px;font-weight:700;color:var(--accent)}
+.ct-head small::first-letter{text-transform:uppercase}
+.ct-head h2{font-size:clamp(24px,3.6vw,30px)}
+.ct-head .go{color:var(--accent);flex:none;min-height:44px}
+.t-list{display:grid}
+.t-row{display:grid;grid-template-columns:46px minmax(0,1fr) auto;align-items:center;gap:12px;min-height:64px;padding:8px 0;border-top:1px solid var(--line);text-decoration:none}
+.t-row .ava{width:46px;height:46px}
+.t-row b{display:block;font-size:15px;line-height:1.3}
+.t-row div span{font-size:13px;color:var(--muted)}
+.t-row em{font-style:normal;font-size:13px;font-weight:700;color:var(--accent);white-space:nowrap}
+.t-row:hover b{color:var(--accent)}
+.t-more{display:flex;align-items:center;min-height:48px;border-top:1px solid var(--line);font-size:13.5px;font-weight:700;color:var(--accent);text-decoration:none}
+.t-empty{margin:0;padding:14px 0 4px;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px}
+@media (min-width:980px){
+  .top3{grid-template-columns:1.15fr 1fr;grid-template-rows:auto 1fr}
+  .c-wa{grid-row:1/3;align-content:center}
+  .c-wa::after{width:420px;height:420px;right:-120px;top:-120px}.c-wa::before{width:280px;height:280px;right:-50px;top:-50px}
+}
 
 /* Banners */
 .banners{display:grid;gap:14px;margin-top:14px}
@@ -351,17 +399,34 @@ dialog.legal-d .x{float:right}
 </dialog>
 
 <main id="topo" class="wrap">
-  <section class="hero" aria-labelledby="h1">
-    <img src="img/head-spa.webp" width="800" height="600" fetchpriority="high" alt="Cliente relaxa durante sessão de Head Spa enquanto a terapeuta massageia o couro cabeludo">
-    <div class="txt">
+  <section class="top3" aria-labelledby="h1">
+    <div class="c-wa">
       <span class="pill"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Clínica médica e spa · Tucano-BA</span>
-      <h1 id="h1"><span class="sr">Lemis Clínica Médica e Spa: </span>Cuidado <strong>único</strong> com a sua saúde e o seu bem-estar</h1>
-      <p>Consultas em várias especialidades, exames com laudo e o primeiro Head Spa da região, no mesmo endereço.</p>
-      <div class="cta">
-        <a class="btn btn-champ" data-wa="Olá, Clínica Lemis! Gostaria de agendar uma consulta." data-ev="whatsapp_hero" href="https://wa.me/5575988367934" target="_blank" rel="noopener">
-          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>Agendar consulta</a>
-        <a class="btn btn-glass" href="#agenda">Ver agenda da semana</a>
+      <h1 id="h1"><span class="sr">Lemis Clínica Médica e Spa: </span>Atendimento pelo <strong>WhatsApp</strong></h1>
+      <p>Agende consultas, exames e Head Spa direto com a recepção da Lemis.</p>
+      <a class="btn btn-champ wa-big" data-wa="Olá, Clínica Lemis! Gostaria de agendar um atendimento." data-ev="whatsapp_topo_card" href="https://wa.me/5575988367934" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20l1.3-3.8A8 8 0 1 1 8 19.2z"/><path d="M9 9.5c.3 2 2.5 4.3 5 5l1.2-1.2 1.8.8-.4 1.7c-4 .5-8-3.5-7.7-7.6L10.5 8l.8 1.8z"/></svg><span>Chamar no WhatsApp<small>(75) 98836-7934</small></span></a>
+      <a class="call" href="tel:+5575988367934" data-ev="telefone">Prefere ligar? <u>(75) 98836-7934</u></a>
+    </div>
+
+    <div class="c-go">
+      <h2>Confira <strong>serviços</strong> ou <strong>especialidades</strong></h2>
+      <div class="go-grid">
+        <a class="tile" href="#especialidades" data-ev="topo_especialidades">
+          <span class="t-ic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v5a4 4 0 0 0 8 0V3"/><path d="M10 12v3a5 5 0 0 0 10 0v-2"/><circle cx="20" cy="11" r="2"/></svg></span>
+          <b>Especialidades</b><span><span id="nSpecs2">22</span> áreas para consulta</span><i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16 16 8M9 8h7v7"/></svg></i></a>
+        <a class="tile" href="#exames" data-ev="topo_servicos">
+          <span class="t-ic"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/><path d="M4 12h4l2-3 3 6 2-3h5"/></svg></span>
+          <b>Serviços</b><span>Exames, Head Spa e spa</span><i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16 16 8M9 8h7v7"/></svg></i></a>
       </div>
+    </div>
+
+    <div class="c-today" aria-labelledby="today-t">
+      <div class="ct-head">
+        <div><small id="todayLabel">Agenda do dia</small><h2 id="today-t">Quem atende <strong id="todayWhen">hoje</strong></h2></div>
+        <a class="go" href="#agenda" data-ev="topo_agenda_semana">Semana<i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16 16 8M9 8h7v7"/></svg></i></a>
+      </div>
+      <div id="todayList" class="t-list" aria-live="polite"></div>
     </div>
   </section>
 
@@ -373,22 +438,6 @@ dialog.legal-d .x{float:right}
   </div>
 
   <div class="banners">
-    <a class="banner b-cafe today rise" href="#agenda" data-ev="banner_agenda">
-      <div class="bt">
-        <h3 id="todayTitle">Agenda de hoje</h3>
-        <p id="todayText">Veja <strong>quem atende</strong> e agende direto pelo WhatsApp.</p>
-        <span class="go">Ver agenda<i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16 16 8M9 8h7v7"/></svg></i></span>
-      </div>
-      <div class="pic"><div class="stack" id="todayStack" aria-hidden="true"></div></div>
-    </a>
-    <a class="banner b-nude rise" href="#especialidades" data-ev="banner_especialidades">
-      <div class="bt">
-        <h3>Consultas</h3>
-        <p><strong>Especialistas</strong> do coração à pediatria, da psicologia à dermatologia.</p>
-        <span class="go">Ver especialidades<i><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16 16 8M9 8h7v7"/></svg></i></span>
-      </div>
-      <div class="pic group" aria-hidden="true"><span class="g0"><svg class="sil" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64"/><circle cx="32" cy="25" r="11.5"/><path d="M9 66c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg></span><span class="g1"><svg class="sil" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64"/><circle cx="32" cy="25" r="11.5"/><path d="M9 66c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg></span><span class="g2"><svg class="sil" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64"/><circle cx="32" cy="25" r="11.5"/><path d="M9 66c0-13.5 10.3-23 23-23s23 9.5 23 23z"/></svg></span></div>
-    </a>
     <a class="banner b-cafe rise" href="#head-spa" data-ev="banner_headspa">
       <div class="bt">
         <h3>Head <strong>Spa</strong></h3>
@@ -649,19 +698,21 @@ tabs.addEventListener("keydown", e => {
 });
 showDay(0);
 
-/* Banner "Agenda de hoje" */
-const todayList = prosOn(today), stack = document.getElementById("todayStack");
-if (todayList.length) {
-  document.getElementById("todayText").innerHTML = `<strong>${todayList.length} ${todayList.length > 1 ? "profissionais" : "profissional"}</strong> ${todayList.length > 1 ? "atendem" : "atende"} hoje. Agende direto pelo WhatsApp.`;
-  stack.innerHTML = todayList.slice(0, 2).map(() => `<span>${SIL}</span>`).join("") + (todayList.length > 2 ? `<span>+${todayList.length - 2}</span>` : "");
-} else {
-  const next = week.slice(1).find(d => prosOn(d).length);
-  if (next) {
-    const nl = prosOn(next);
-    document.getElementById("todayTitle").textContent = "Próxima agenda";
-    document.getElementById("todayText").innerHTML = `<strong>${esc(next.toLocaleDateString("pt-BR", {weekday: "long"}))}</strong>: ${nl.length} ${nl.length > 1 ? "profissionais" : "profissional"}. Agende pelo WhatsApp.`;
-    stack.innerHTML = nl.slice(0, 2).map(() => `<span>${SIL}</span>`).join("");
-  }
+/* Cartão "Agenda do dia" no topo */
+{
+  const list = document.getElementById("todayList"), MAX = 4;
+  let day = today, pros = prosOn(today);
+  if (!pros.length) { const next = week.slice(1).find(d => prosOn(d).length); if (next) { day = next; pros = prosOn(next); } }
+  const label = day.toLocaleDateString("pt-BR", {weekday: "long", day: "2-digit", month: "2-digit"});
+  document.getElementById("todayLabel").textContent = label;
+  document.getElementById("todayWhen").textContent = day === today ? "hoje" : (iso(day) === iso(week[1]) ? "amanhã" : day.toLocaleDateString("pt-BR", {weekday: "long"}));
+  list.innerHTML = pros.length
+    ? pros.slice(0, MAX).map(p => `<a class="t-row" target="_blank" rel="noopener" data-ev="whatsapp_topo_agenda" data-label="${esc(p.n)}" aria-label="Agendar com ${esc(p.n)}, ${esc(p.e)}"
+        href="${esc(waLink(`Olá! Quero agendar com ${p.n} (${p.e}) para ${label}.`))}"><span class="ava" aria-hidden="true">${SIL}</span>
+        <div><b>${esc(p.n)}</b><span>${esc(p.e)}</span></div><em>Agendar</em></a>`).join("") +
+      (pros.length > MAX ? `<a class="t-more" href="#agenda">Ver mais ${pros.length - MAX} ${pros.length - MAX > 1 ? "profissionais" : "profissional"}</a>` : "")
+    : `<p class="t-empty">A agenda desta semana ainda não foi divulgada. <a class="tlink" style="color:var(--accent)" target="_blank" rel="noopener" data-ev="whatsapp_agenda_vazia" href="${esc(waLink("Olá! Quem atende na Lemis hoje?"))}">Perguntar pelo WhatsApp</a></p>`;
+  document.getElementById("nSpecs2").textContent = SPECS.length;
 }
 
 /* ===== Especialidades em pílulas ===== */
