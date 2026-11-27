@@ -168,7 +168,7 @@ img{max-width:100%;display:block}
 
 /* Card Head Spa: foto à direita com camada de cor (mesmo tratamento dos cupons da Beatriz) */
 .c-head{--c:0.34 0.03 45;min-height:220px;display:flex;flex-direction:column;justify-content:center;color:var(--on-dark);border-color:transparent;background:oklch(var(--c))}
-.c-head-photo{position:absolute;right:0;top:0;bottom:0;z-index:-3;width:62%;height:100%;object-fit:cover;object-position:46% 45%;filter:brightness(1.3) saturate(.95)}
+.c-head-photo{position:absolute;right:0;top:0;bottom:0;z-index:-3;width:62%;height:100%;object-fit:cover;object-position:50% 45%}
 .c-head::after{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg in oklch, oklch(var(--c)) 36%, oklch(var(--c) / 0.7) 56%, oklch(var(--c) / 0.12) 100%)}
 .c-head-body{position:relative;width:72%}
 .c-head .eyebrow{color:oklch(0.92 0.035 70)}
@@ -192,7 +192,6 @@ img{max-width:100%;display:block}
 /* Marca d'água: selo LM */
 .wm{position:absolute;z-index:-1;width:var(--wm,250px);height:var(--wm,250px);pointer-events:none;color:var(--ink);opacity:.06}
 .c-spa .wm{--wm:240px;right:-60px;bottom:-70px;color:var(--on-dark);opacity:.15}
-.c-head .wm{--wm:230px;right:-50px;bottom:-60px;color:var(--on-dark);opacity:.14}
 .c-exa .wm{--wm:220px;left:-60px;bottom:-70px;color:var(--caramel-deep);opacity:.12}
 .c-loc .wm{--wm:220px;right:-55px;top:-55px;color:var(--caramel-deep);opacity:.09}
 .panel .wm{--wm:240px;right:-70px;top:-70px;color:var(--caramel-deep);opacity:.08}
@@ -275,7 +274,7 @@ img{max-width:100%;display:block}
   .hero-mark{width:96%;right:-22%}
   .pair{grid-template-columns:1fr}
   .c-head{min-height:250px}
-  .c-head-photo{width:78%;object-position:52% 45%}
+  .c-head-photo{width:78%;object-position:50% 45%}
   .c-head-body{width:68%}
   .c-head::after{background:linear-gradient(90deg in oklch, oklch(var(--c)) 26%, oklch(var(--c) / 0.72) 50%, oklch(var(--c) / 0.1) 100%)}
   .col{display:contents}
@@ -345,8 +344,7 @@ img{max-width:100%;display:block}
     </article>
 
     <article class="card c-head" aria-labelledby="t-head">
-      <img class="c-head-photo" src="assets/head-spa.webp" alt="Cliente relaxando durante o Head Spa, com massagem no couro cabeludo sob ducha de água morna" width="1200" height="820" loading="lazy" decoding="async">
-      <svg class="wm" aria-hidden="true"><use href="#selo"/></svg>
+      <img class="c-head-photo" src="assets/head-spa.webp" alt="Cliente deitada recebendo o Head Spa, com ducha de água morna caindo sobre o couro cabeludo" width="1200" height="800" loading="lazy" decoding="async">
       <div class="c-head-body">
         <p class="eyebrow">ritual de relaxamento</p>
         <h2 id="t-head">Head Spa</h2>
