@@ -63,6 +63,7 @@
     {"@type": "MedicalTherapy", "name": "Clínica da Dor"},
     {"@type": "MedicalTherapy", "name": "Angiologia"}
   ],
+  "founder": {"@type": "Person", "name": "Dra. Emellin", "jobTitle": "CEO e médica psiquiatra"},
   "sameAs": ["https://www.instagram.com/clinicalemis/"]
 }
 </script>
@@ -123,7 +124,7 @@ img{max-width:100%;display:block}
 /* Herói */
 .hero{position:sticky;top:20px;min-height:clamp(560px,calc(100dvh - 160px),780px);display:flex;flex-direction:column;justify-content:flex-end;color:var(--on-dark);border-color:transparent;
   background:linear-gradient(172deg in oklch, oklch(0.6 0.06 55) 0%, oklch(0.42 0.05 45) 52%, oklch(0.25 0.03 40) 100%)}
-.hero-photo{position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;object-position:70% 30%}
+.hero-photo{position:absolute;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
 .hero:has(.hero-photo)::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg in oklch, oklch(0.8 0.06 70), oklch(0.67 0.07 60));mix-blend-mode:soft-light;opacity:.9}
 .hero-photo + .hero-shade{position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg in oklch, oklch(0.3 0.03 45 / 0.6) 0%, oklch(0.45 0.04 50 / 0) 18%, oklch(0.45 0.04 50 / 0) 34%, oklch(0.45 0.04 50 / 0.55) 58%, oklch(0.34 0.03 45 / 0.92) 100%)}
 .hero-mark{position:absolute;z-index:-1;right:-8%;top:-4%;width:78%;height:auto;color:oklch(0.975 0.01 75 / 0.055)}
@@ -287,7 +288,7 @@ img{max-width:100%;display:block}
   <!-- Coluna 1: destaque -->
   <div class="col col-hero">
     <section class="card hero" aria-labelledby="h1">
-      <img class="hero-photo" src="assets/hero.webp" alt="Médica da Clínica Lemis sorrindo e acolhendo uma paciente durante a consulta" width="1200" height="801" fetchpriority="high" decoding="async">
+      <img class="hero-photo" src="assets/hero.webp" alt="Dra. Emellin, CEO da Clínica Lemis, médica psiquiatra" width="1080" height="1080" fetchpriority="high" decoding="async">
       <div class="hero-shade"></div>
       <svg class="wm" aria-hidden="true"><use href="#selo"/></svg>
       <svg class="hero-mark" hidden viewBox="10 45 66 112" aria-hidden="true"><g fill="currentColor"><path d="M 14.50,49.25 L 14.25,49.50 L 14.25,134.00 L 14.50,134.25 L 14.50,136.25 L 14.75,136.50 L 15.25,140.75 L 16.00,141.75 L 16.50,143.50 L 19.00,147.00 L 22.25,149.75 L 26.25,151.50 L 27.50,151.50 L 31.00,152.50 L 70.75,152.50 L 71.00,152.75 L 71.50,152.50 L 71.75,152.00 L 71.50,149.75 L 69.75,149.25 L 67.75,149.50 L 67.50,149.25 L 35.00,149.25 L 34.75,149.00 L 33.25,149.00 L 28.25,147.00 L 25.25,143.50 L 23.75,140.50 L 23.25,138.75 L 23.25,137.75 L 23.00,137.50 L 23.00,136.25 L 22.75,136.00 L 22.75,49.50 L 22.50,49.25 Z"/></g></svg>
