@@ -13,6 +13,19 @@
     if (el) track(el.dataset.track, el.dataset.label);
   });
 
+  // Mapa sob demanda: o iframe do Google só carrega quando a pessoa pede
+  const mapBtn = document.querySelector(".map-load");
+  if (mapBtn) {
+    mapBtn.addEventListener("click", () => {
+      const f = document.createElement("iframe");
+      f.src = mapBtn.dataset.src;
+      f.title = "Mapa da Clínica Lemis na Rua Manoel Ramiro, Centro de Tucano-BA";
+      f.referrerPolicy = "no-referrer-when-downgrade";
+      f.setAttribute("allowfullscreen", "");
+      mapBtn.replaceWith(f);
+    }, { once: true });
+  }
+
   // Filtro de especialidades
   const lista = document.getElementById("lista");
   if (!lista) return;
@@ -45,14 +58,6 @@
 
   tabs.forEach((t) => t.addEventListener("click", () => setCat(t.dataset.cat)));
   q.addEventListener("input", aplicar);
-
-  document.querySelectorAll("[data-goto]").forEach((b) =>
-    b.addEventListener("click", () => {
-      q.value = "";
-      setCat(b.dataset.goto);
-      document.getElementById("especialidades").scrollIntoView({ block: "start" });
-    })
-  );
 
   const ano = document.getElementById("ano");
   if (ano) ano.textContent = new Date().getFullYear();
